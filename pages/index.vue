@@ -1,64 +1,47 @@
 <template>
-  <section class="container">
+  <div>
+    <h1>おっぱいのサイズを、<br>カップ数でざっくり。</h1>
     <div>
-      <app-logo/>
-      <h1 class="title">
-        zakkuri-bra
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+      <label for="top">トップ</label>
+      <input type="number" id="top" v-model="top" @change="calcCup(top, under)">&nbsp;cm
+      <label for="under">アンダー</label>
+      <input type="number" id="under" v-model="under" @change="calcCup(top, under)">&nbsp;cm
+      <div>
+        <span>{{ diff }}</span>
+        <span>{{ cup }}</span>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+  export default {
+    data() {
+      return {
+        top: 0,
+        under: 0,
+        cup: 0
+      }
+    },
+    computed: {
+      diff () {
+        return this.top - this.under
+      }
+    },
+    methods: {
+      calcCup (top, under) {
+        const cups = [ 7.5, 10, 12.5, 15, 17.5, 20, 22.5, 25, 27.5, 30, 32.5 ]
 
-export default {
-  components: {
-    AppLogo
+        const diff = top - under
+        let min = 999, approx
+        for (let cup of cups) {
+          if (min > Math.abs(diff - cup)) {
+            min = Math.abs(diff - cup)
+            approx = cup
+          }
+        }
+        this.cup = approx
+      }
+    }
   }
-}
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
