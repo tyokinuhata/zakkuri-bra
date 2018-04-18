@@ -30,14 +30,59 @@
     },
     methods: {
       calcCup (top, under) {
-        const cups = [ 7.5, 10, 12.5, 15, 17.5, 20, 22.5, 25, 27.5, 30, 32.5 ]
+        const cups = [
+          {
+            grade: 'AA',
+            cm: 7.5
+          },
+          {
+            grade: 'A',
+            cm: 10
+          },
+          {
+            grade: 'B',
+            cm: 12.5
+          },
+          {
+            grade: 'C',
+            cm: 15
+          },
+          {
+            grade: 'D',
+            cm: 17.5
+          },
+          {
+            grade: 'E',
+            cm: 20
+          },
+          {
+            grade: 'F',
+            cm: 22.5
+          },
+          {
+            grade: 'G',
+            cm: 25
+          },
+          {
+            grade: 'H',
+            cm: 27.5
+          },
+          {
+            grade: 'I',
+            cm: 30
+          },
+          {
+            grade: 'J',
+            cm: 32.5
+          }
+        ]
 
         const diff = top - under
         let min = 999, approx
         for (let cup of cups) {
-          if (min > Math.abs(diff - cup)) {
-            min = Math.abs(diff - cup)
-            approx = cup
+          if (min > Math.abs(diff - cup.cm)) {
+            min = Math.abs(diff - cup.cm)
+            approx = cup.grade
           }
         }
         this.cup = approx
