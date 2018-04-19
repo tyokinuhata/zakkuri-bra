@@ -1,13 +1,19 @@
 <template>
-  <div class="container">
-    <h1>おっぱいのサイズを、<br>カップ数でざっくり。</h1>
-    <div>
-      <label for="top">トップ</label>
-      <input type="number" id="top" v-model="top" @change="calcCup(top, under)">&nbsp;cm
-      <label for="under">アンダー</label>
-      <input type="number" id="under" v-model="under" @change="calcCup(top, under)">&nbsp;cm
-      <div>
-        <span>あなたのカップ数は{{ cup }}です！</span>
+  <div class="container mt-4">
+    <h1 class="text-center">おっぱいのサイズを、<br>カップ数でざっくり。</h1>
+    <div class="text-center">
+      <div class="row mt-2">
+        <label for="top" class="col-md-2">トップ&nbsp;</label>
+        <input type="number" id="top" class="form-control col-md-8" v-model="top" @change="calcCup(top, under)">
+        <span class="col-md-2">cm</span>
+      </div>
+      <div class="row mt-2">
+        <label for="under" class="col-md-2">アンダー&nbsp;</label>
+        <input type="number" id="under" class="form-control col-md-8" v-model="under" @change="calcCup(top, under)">
+        <span class="col-md-2">cm</span>
+      </div>
+      <div class="row">
+        <span class="col-md-12 mt-2">あなたのカップ数は{{ cup }}です！</span>
       </div>
     </div>
   </div>
@@ -84,3 +90,7 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+
+</style>
