@@ -4,7 +4,7 @@
     <div class="text-center">
       <div class="row mt-2">
         <label for="top" class="col-md-2">トップ&nbsp;</label>
-        <input type="number" id="top" class="form-control col-md-8" v-model="top" @change="calcCup(top, under)">
+        <input type="number" id="top" class="form-control col-md-8" v-model="top" @change="calcCup(top, under)" autofocus>
         <span class="col-md-2">cm</span>
       </div>
       <div class="row mt-2">
@@ -13,7 +13,7 @@
         <span class="col-md-2">cm</span>
       </div>
       <div class="row">
-        <span class="col-md-12 mt-2">あなたのカップ数は{{ cup }}です！</span>
+        <span class="col-md-12 mt-2 h2">あなたのカップ数は{{ cup }}です！</span>
       </div>
     </div>
   </div>
