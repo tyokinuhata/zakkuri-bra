@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>おっぱいのサイズを、<br>カップ数でざっくり。</h1>
     <div>
       <label for="top">トップ</label>
