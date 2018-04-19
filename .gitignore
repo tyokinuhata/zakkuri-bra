@@ -8,9 +8,6 @@ yarn-error.log
 # Nuxt build
 .nuxt
 
-# Nuxt generate
-dist
-
 # etc
 .idea/*
 .DS_Store
