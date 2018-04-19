@@ -7,8 +7,7 @@
       <label for="under">アンダー</label>
       <input type="number" id="under" v-model="under" @change="calcCup(top, under)">&nbsp;cm
       <div>
-        <span>{{ diff }}</span>
-        <span>{{ cup }}</span>
+        <span>あなたのカップ数は{{ cup }}です！</span>
       </div>
     </div>
   </div>
@@ -20,12 +19,7 @@
       return {
         top: 0,
         under: 0,
-        cup: 0
-      }
-    },
-    computed: {
-      diff () {
-        return this.top - this.under
+        cup: 'AA'
       }
     },
     methods: {
