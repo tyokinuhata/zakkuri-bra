@@ -15,3 +15,4 @@ $ npm run generate
 masterブランチ ... GitHub Pages公開用ブランチ  
 developブランチ ... 開発用ブランチ
 
+developブランチでの変更が適宜masterブランチへ取り込まれます。
