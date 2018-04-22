@@ -10,7 +10,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Oppai boin boin' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/zakkuri-bra/favicon.ico' }
     ]
   },
   /*
@@ -36,7 +36,7 @@ module.exports = {
     }
   },
   router: {
-    base: '/'
+    base: '/zakkuri-bra/'
   },
   modules: [
     'bootstrap-vue/nuxt',
