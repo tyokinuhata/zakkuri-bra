@@ -12,5 +12,7 @@ $ npm run generate
 
 ## ブランチの運用方法について
 
-gh-pagesブランチ ... GitHub Pages公開用のブランチ
-masterブランチ ... 開発用ブランチ
+masterブランチ ... GitHub Pages公開用ブランチ  
+developブランチ ... 開発用ブランチ
+
+developブランチでの変更が適宜masterブランチへ取り込まれます。
