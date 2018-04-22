@@ -74,7 +74,71 @@
           {
             grade: 'J',
             cm: 32.5
-          }
+          },
+          {
+            grade: 'K',
+            cm: 35
+          },
+          {
+            grade: 'L',
+            cm: 37.5
+          },
+          {
+            grade: 'M',
+            cm: 40
+          },
+          {
+            grade: 'N',
+            cm: 42.5
+          },
+          {
+            grade: 'O',
+            cm: 45
+          },
+          {
+            grade: 'P',
+            cm: 47.5
+          },
+          {
+            grade: 'Q',
+            cm: 50
+          },
+          {
+            grade: 'R',
+            cm: 52.5
+          },
+          {
+            grade: 'S',
+            cm: 55
+          },
+          {
+            grade: 'T',
+            cm: 57.5
+          },
+          {
+            grade: 'U',
+            cm: 60
+          },
+          {
+            grade: 'V',
+            cm: 62.5
+          },
+          {
+            grade: 'W',
+            cm: 65
+          },
+          {
+            grade: 'X',
+            cm: 67.5
+          },
+          {
+            grade: 'Y',
+            cm: 70
+          },
+          {
+            grade: 'Z',
+            cm: 72.5
+          },
         ]
 
         const diff = top - under
